@@ -31,3 +31,8 @@ The flow consists of three tasks:
 3. reassemble_message: sorts the messages by order number and writes the final assembled message to final_message.txt.
 
 For this project, Prefect was chosen for orchestration because it allows clear task definition, automatic logging, and easy management of dependencies. The pipeline is structured to poll the SQS queue, ensuring it only starts processing once messages are available. Tasks are separated into modular units—waiting for messages, fetching messages, and reassembling them—to make debugging and maintenance simpler. Intermediate messages are saved in a JSON file for traceability, while the final assembled message is output as plain text for readability. This design ensures reliability, clarity, and maintainability throughout the workflow.
+
+An example output is:
+- <img width="912" height="79" alt="Screenshot 2025-11-11 at 9 54 47 PM" src="https://github.com/user-attachments/assets/a462a229-ce9f-4257-9910-22e11035695c" />
+
+
